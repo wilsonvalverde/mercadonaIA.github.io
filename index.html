@@ -6,15 +6,86 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Mercadona</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src='main.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
 </head>
 
 <body>
+
     <h1>Mercadona IA</h1>
     <h2>Victoria Coronel</h2>
     <h2>Wilson Valverde</h2>
     <h3>:3</h3>
+    <form id="calculate">
+        <select name="canal" id="canal" required>
+            <option selected value="1">Empresa</option>
+            <option value="2">Minorista</option>
+        </select>
+        <select name="region" id="region" required>
+            <option selected value="1">Lisboa</option>
+            <option value="2">Oporto</option>
+            <option value="3">Otros</option>
+        </select>
+        <button type="submit">Calcular</button>
+    </form>
+    <br>
+    <table>
+        <tr>
+            <th>Tipo de Posible Gasto</th>
+            <th>Alimentos Congelados</th>
+            <th>Embutidos</th>
+            <th>Víveres</th>
+            <th>Artículos de Limpieza</th>
+            <th>Lácteos</th>
+            <th>Productos Frescos</th>
+
+        </tr>
+        <tr>
+            <td>Gasto posible alto</td>
+            <td id="g_PA"></td>
+            <td id="g_PA1"></td>
+            <td id="g_PA2"></td>
+            <td id="g_PA3"></td>
+            <td id="g_PA4"></td>
+            <td id="g_PA5"></td>
+
+        </tr>
+        <tr>
+            <td>Gasto posible medio</td>
+            <td id="g_PM"></td>
+            <td id="g_PM1"></td>
+            <td id="g_PM2"></td>
+            <td id="g_PM3"></td>
+            <td id="g_PM4"></td>
+            <td id="g_PM5"></td>
+        </tr>
+        <tr>
+            <td>Gasto posible bajo</td>
+            <td id="g_PB"></td>
+            <td id="g_PB1"></td>
+            <td id="g_PB2"></td>
+            <td id="g_PB3"></td>
+            <td id="g_PB4"></td>
+            <td id="g_PB5"></td>
+        </tr>
+        <tr>
+            <td>Gasto Promedio Total</td>
+            <td id="g_PP"></td>
+            <td id="g_PP1"></td>
+            <td id="g_PP2"></td>
+            <td id="g_PP3"></td>
+            <td id="g_PP4"></td>
+            <td id="g_PP5"></td>
+
+        </tr>
+
+
+
+    </table>
+
 
 </body>
 
