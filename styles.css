@@ -1,16 +1,84 @@
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 70%;
-    margin: auto;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+  margin: auto;
+  border-color: #fae9a491;
+  border-style: solid;
+  border-radius: 13px;
+}
+.img-ptr{
+  width: 199px;
+  height: 148px;
+  margin: auto;
+  border-radius: 8px;
+}
+.tablaa h2{
+    text-align: center;
+    color: #478ac9;
+    font-weight: 600;
+}
+
+td, th {
+  border: 1px solid #ffc300b8;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #ffc300b8;
+}
+.algoritmo{}
+.algoritmo form{
+  width: 31%;
+  margin: 3vw auto;
+  padding-left: 6%;
+}
+.algoritmo input{}
+.algoritmo select{
+  width: 38%;
+  border-radius: 5px;
+  background: white;
+  border-style: double;
+  border-color: #8ed9e3;
+  border-width: 2px;
+}
+.pie{
+
+  text-align: center;
+}
+.pie strong{}
+.users{
+    font-size: 28px !important;
+    margin: 0px 0px !important;
+    color: #34b83e !important;
+    /* float: right; */
+    text-align: right;
+}
+.algoritmo button{
+  background: #ee27518a;
+  border-color: #EE2751;
+  border-style: solid;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+  width: 77%;
+  margin-top: 3%;
+}
+.action h2{
+  text-align: center;
+  color: #478ac9;
+}
+.algoritmo select option:hover{
+background-color: #f2bbbe;
+}
+.mo{
+    width: 100px;
+}
+.ia{
+    width: 98px;
+}
+.le{
+    width: 101px;
+}
