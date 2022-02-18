@@ -1,48 +1,16 @@
 table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 70%;
-  margin: auto;
-  border-color: #fae9a491;
-  border-style: solid;
-  border-radius: 13px;
-}
-
-td, th {
-  border: 1px solid #fae9a4;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #f9e79b;
-}
-.algoritmo{}
-.algoritmo form{
-  width: 31%;
-  margin: 3vw auto;
-}
-.algoritmo input{}
-.algoritmo select{
-  width: 38%;
-  border-radius: 5px;
-  background: white;
-  border-style: double;
-  border-color: #8ed9e3;
-  border-width: 2px;
-}
-.algoritmo button{
-  background: #f2bbbe;
-  border-color: #f2bbbe;
-  border-style: solid;
-  border-radius: 4px;
-  color: black;
-  cursor: pointer;
-}
-.action h2{
-  text-align: center;
-  color: #478ac9;
-}
-.algoritmo select option:hover{
-background-color: #f2bbbe;
-}
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    margin: auto;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

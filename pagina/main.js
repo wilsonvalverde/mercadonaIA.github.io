@@ -2,6 +2,11 @@ $(document).ready(function () {
     importCsv()
     let nodedataDic = [];
     $('#calculate').submit(function (e) {
+        $('html, body').animate({
+
+            scrollTop: $("#resultados").offset().top
+
+        }, 2000);
         let canal = $("#canal").val()
         let region = $("#region").val()
         e.preventDefault()
@@ -23,32 +28,53 @@ $(document).ready(function () {
         $("#g_PA").html(frezz.max);
         $("#g_PM").html(frezz.med);
         $("#g_PB").html(frezz.min);
-        $("#g_PP").html(frezz.pro);
+        $("#g_PP").html(((frezz.max + frezz.med + frezz.min) / 3).toFixed(4));
 
         $("#g_PA1").html(delicassen.max);
         $("#g_PM1").html(delicassen.med);
         $("#g_PB1").html(delicassen.min);
-        $("#g_PP1").html(delicassen.pro);
+        $("#g_PP1").html(((delicassen.max + delicassen.med + delicassen.min) / 3).toFixed(4));
 
         $("#g_PA2").html(grocery.max);
         $("#g_PM2").html(grocery.med);
         $("#g_PB2").html(grocery.min);
-        $("#g_PP2").html(grocery.pro);
+        $("#g_PP2").html(((grocery.max + grocery.med + grocery.min) / 3).toFixed(4));
 
         $("#g_PA3").html(detergen.max);
         $("#g_PM3").html(detergen.med);
         $("#g_PB3").html(detergen.min);
-        $("#g_PP3").html(detergen.pro);
+        $("#g_PP3").html(((detergen.max + detergen.med + detergen.min) / 3).toFixed(4));
 
         $("#g_PA4").html(milk.max);
         $("#g_PM4").html(milk.med);
         $("#g_PB4").html(milk.min);
-        $("#g_PP4").html(milk.pro);
+        $("#g_PP4").html(((milk.max + milk.med + milk.min) / 3).toFixed(4));
 
         $("#g_PA5").html(fresh.max);
         $("#g_PM5").html(fresh.med);
         $("#g_PB5").html(fresh.min);
-        $("#g_PP5").html(fresh.pro);
+        $("#g_PP5").html(((fresh.max + fresh.med + fresh.min) / 3).toFixed(4));
+        /*
+        $("#r_1").html(fresh.pro);
+        $("#r_2").html(fresh.pro);
+        $("#r_3").html(fresh.pro);
+        $("#r_4").html(fresh.pro);
+        $("#r_5").html(fresh.pro);
+        $("#r_6").html(((fresh.max + fresh.med + fresh.min) / 3).toFixed(4));
+
+        $("#rm_1").attr("src", "images/viveres.jpeg");
+        $("#rm_2").attr("src", "images/viveres.jpeg");
+        $("#rm_3").attr("src", "images/viveres.jpeg");
+        $("#rm_4").attr("src", "images/viveres.jpeg");
+        $("#rm_5").attr("src", "images/viveres.jpeg");
+        $("#rm_6").attr("src", "images/viveres.jpeg");
+        */
+
+        $('html, body').animate({
+
+            scrollTop: $("#resultados").offset().top
+
+        }, 2000);
     }
     function getAltFrocen_C(data) {
         let getPayMax = [];
@@ -134,9 +160,8 @@ $(document).ready(function () {
         $.ajax({
             type: "GET",
             url: "output.csv",
-            dataType: "csv",
+            dataType: "text",
             success: function (response) {
-                dataArray = $.csv.toArrays(response);
                 nodes = $.csv.toObjects(response);
                 nodesToJson(nodes);
             }
