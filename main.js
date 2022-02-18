@@ -174,7 +174,7 @@ function pro(data1, data2, data3) {
 function importCsv() {
     $.ajax({
         type: "GET",
-        url: "https://wilsonvalverde.github.io/mercadonaIA.github.io/css/output.csv",
+        url: "output.csv",
         dataType: "text",
         success: function (response) {
             let nodes = $.csv.toObjects(response);
