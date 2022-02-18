@@ -62,9 +62,9 @@ function get_GPA(frezz, delicassen, grocery, milk, fresh, detergen) {
 
     let ordenName = {
         'Productos Frescos': fresh.pro,
-        'Lacteos': milk.pro,
-        'Articulos de limpieza': detergen.pro,
-        'Viveres': grocery.pro,
+        'Lácteos': milk.pro,
+        'Artículos de limpieza': detergen.pro,
+        'Víveres': grocery.pro,
         'Embutidos': delicassen.pro,
         'Congelados': frezz.pro
     }
@@ -81,8 +81,11 @@ function get_GPA(frezz, delicassen, grocery, milk, fresh, detergen) {
                 if (contenido == element) {
                     $("#r_" + index).html(key);
                     $("#rm_" + index).attr("src", "images/" + key + '.jpeg');
-                    key == 'Articulos de limpieza' && $("#rm_" + index).attr("src", "images/limpieza.jpeg");
+                    key == 'Artículos de limpieza' && $("#rm_" + index).attr("src", "images/limpieza.jpeg");
                     key == 'Productos Frescos' && $("#rm_" + index).attr("src", "images/Productos_Frescos.jpeg");
+                    key == 'Víveres' && $("#rm_" + index).attr("src", "images/Viveres.jpeg");
+                    key == 'Lácteos' && $("#rm_" + index).attr("src", "images/Lacteos.jpeg");
+
 
                 }
             }
@@ -166,8 +169,10 @@ function getResult(data) {
     return avg.toFixed(2);
 }
 function pro(data1, data2, data3) {
-    let result = (parseFloat(data1)) + (parseFloat(data2)) + (parseFloat(data3));
-    return (result / 3).toFixed(2);
+    let result = (parseFloat(data1 > 0 ? data1 : 0)) + (parseFloat(data2 > 0 ? data2 : 0)) + (parseFloat(data3 > 0 ? data3 : 0));
+    let cont = (data1 > 0 && 1) + (data2 > 0 && 1) + (data3 > 0 && 1);
+    console.log(cont)
+    return (result / cont).toFixed(2);
 }
 
 
