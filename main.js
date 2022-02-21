@@ -1,5 +1,4 @@
 let nodedataDic = [];
-const ML = require('ml');
 $(document).ready(function () {
     importCsv()
     $('#calculate').submit(function (e) {
